@@ -1,6 +1,6 @@
 {
     "aps": {
-        "type": "http://myweatherdemo.com/suwizard/user/1.0"
+        "type": "http://myweatherdemo.com/suwizardbasic/user/1.0"
     },
     "city": "",
     "country": "",

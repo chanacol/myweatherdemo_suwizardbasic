@@ -4,7 +4,7 @@
     require_once("utils.php");   
 
     /**
-    * @type("http://myweatherdemo.com/suwizard/subscription_service/1.0")
+    * @type("http://myweatherdemo.com/suwizardbasic/subscription_service/1.0")
     * @implements("http://aps-standard.org/types/core/resource/1.0")
     */
     
@@ -13,13 +13,13 @@
     {
 
         /**
-         * @link("http://myweatherdemo.com/suwizard/application/1.0")
+         * @link("http://myweatherdemo.com/suwizardbasic/application/1.0")
          * @required
          */
         public $application;
 
         /**
-         * @link("http://myweatherdemo.com/suwizard/user/1.0[]")
+         * @link("http://myweatherdemo.com/suwizardbasic/user/1.0[]")
          */
         public $users;
         
