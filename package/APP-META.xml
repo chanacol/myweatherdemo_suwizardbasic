@@ -19,7 +19,7 @@
         </navigation>
 
         <navigation id="mycp" label="MyWeatherDemo">
-            <var name="user" type-id="http://myweatherdemo.com/suwizard/user/1.0"/>
+            <var name="user" type-id="http://myweatherdemo.com/suwizardbasic/user/1.0"/>
             <plugs-to id="http://www.aps-standard.org/ui/user"/>
             <item id="user" label="User Information">
                 <view id="mycp" label="User Information"/>
