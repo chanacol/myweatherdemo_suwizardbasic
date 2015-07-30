@@ -1,18 +1,19 @@
 require([
-    "dijit/registry",
-    "dojox/mvc/at",
-    "aps/load",
     "dojo/text!./js/user.json",
+    "dojox/mvc/at",
+    "dojox/mvc/getStateful",
+    "dijit/registry",
+    "aps/load",
     "aps/ready!"
-], function (registry, at, load, newUser) {
+], function (newUser, at, getStateful, registry, load) {
 
-    var user = JSON.parse(newUser);
+    var user = getStateful(JSON.parse(newUser));
 
     // information about service user is available in aps.context.param
-    user.username = aps.context.params.user.login;
+    user.set("username", aps.context.params.user.login);
 
     var widgets =
-        ["aps/PageContainer", {id: "top_container"}, [
+        ["aps/PageContainer", [
             ["aps/Output", {
                 id: "description",
                 value: "Here you can create a user in MyWeatherDemo."
@@ -37,7 +38,7 @@ require([
     load(widgets);
 
     aps.app.onNext = function() {
-        var page = registry.byId("top_container");
+        var page = registry.byId("apsPageContainer");
             if (!page.validate()) {
                 aps.apsc.cancelProcessing();
                 return;

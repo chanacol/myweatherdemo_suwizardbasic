@@ -8,7 +8,7 @@ require([
     var user = aps.context.vars.user;
 
     var widgets =
-        ["aps/PageContainer", {id: "top_container"}, [
+        ["aps/PageContainer", [
             ["aps/Output", {
                 id: "description",
                 content: "Congratulations! A user was created for you in MyWeatherDemo.<br><br>You can now go to <a href='http://www.myweatherdemo.com/login' target='_blank'>http://www.myweatherdemo.com/login</a> to login using username <b>${username}</b> and password <b>${password}</b>.<br><br>To see current weather for your city click on 'Weather Information' tab once logged in.",

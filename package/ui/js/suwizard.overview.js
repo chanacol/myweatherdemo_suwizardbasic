@@ -8,7 +8,7 @@ require([
     var user = aps.context.params.objects[0];
 
     var widgets =
-        ["aps/PageContainer", {id: "top_container"}, [
+        ["aps/PageContainer", [
             ["aps/Output", {
                 id: "description",
                 value: "Here you can overview user settings."

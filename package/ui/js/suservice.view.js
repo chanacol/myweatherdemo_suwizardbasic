@@ -1,9 +1,9 @@
 require([
-    "aps/xhr",
     "dojox/mvc/at",
+    "aps/xhr",
     "aps/load",
     "aps/ready!"
-], function (xhr, at, load) {
+], function (at, xhr, load) {
 
     // getting MyWeatherDemo user linked to selected service user (it's available in aps.context.params for this view)
     xhr.get("/aps/2/resources?implementing(http://myweatherdemo.com/suwizardbasic/user/1.0),like(username," + aps.context.params.user.login + ")").then(
@@ -13,7 +13,7 @@ require([
         var user = users[0];
 
         var widgets =
-            ["aps/PageContainer", {id: "top_container"}, [
+            ["aps/PageContainer", [
                 ["aps/Output", {
                     id: "description",
                     value: "Here you can create a user in MyWeatherDemo."
