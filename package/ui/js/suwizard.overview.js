@@ -19,7 +19,7 @@ require([
                 ["aps/Output", {id: "city", label: "City", value: at(user, "city")}],
                 ["aps/Output", {id: "country", label: "Country", value: at(user, "country")}],
                 ["aps/Output", {id: "units", label: "Units of Measurement", value: at(user, "units")}],
-                ["aps/CheckBox", {id: "show_humidity", label: "Do you want to see humidity?", checked: at(user, "include_humidity"), disabled: true}]
+                ["aps/CheckBox", {id: "include_humidity", label: "Do you want to see humidity?", checked: at(user, "include_humidity"), disabled: true}]
             ]]
         ]];
     load(widgets);

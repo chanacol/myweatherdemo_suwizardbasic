@@ -32,7 +32,7 @@ require([
                         { label: "Celsius", value: "celsius", selected: true}
                     ]
                 }],
-                ["aps/CheckBox", {id: "show_humidity", label: "Do you want to see humidity?", checked: at(user, "include_humidity")}]
+                ["aps/CheckBox", {id: "include_humidity", label: "Do you want to see humidity?", checked: at(user, "include_humidity")}]
             ]]
         ]];
     load(widgets);
