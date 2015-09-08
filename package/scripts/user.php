@@ -10,7 +10,7 @@
     * @implements("http://aps-standard.org/types/core/resource/1.0")
     */
 
-    class app extends \APS\ResourceBase
+    class user extends \APS\ResourceBase
     
     {
         /**
