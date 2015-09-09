@@ -20,7 +20,7 @@ require([
             }],
             ["aps/FieldSet", {title: true}, [
                 ["aps/Output", {id: "username", label: "Username", value: at(user, "username")}],
-                ["aps/Password", {id: "password", label: "Password", value: at(user, "password"), required: true, showStrengthIndicator: true}],
+                ["aps/Password", {id: "password", label: "Password", value: at(user, "password"), required: true}],
                 ["aps/TextBox", {id: "city", label: "City", value: at(user, "city"), required: true}],
                 ["aps/TextBox", {id: "country", label: "Country", value: at(user, "country"), required: true}],
                 ["aps/Select", {

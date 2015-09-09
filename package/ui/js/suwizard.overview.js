@@ -15,7 +15,7 @@ require([
             }],
             ["aps/FieldSet", {title: true}, [
                 ["aps/Output", {id: "username", label: "Username", value: at(user, "username")}],
-                ["aps/Password", {id: "password", label: "Password", value: at(user, "password")}],
+                ["aps/Password", {id: "password", label: "Password", value: at(user, "password"), disabled: true, showStrengthIndicator: false, showResetButton: false}],
                 ["aps/Output", {id: "city", label: "City", value: at(user, "city")}],
                 ["aps/Output", {id: "country", label: "Country", value: at(user, "country")}],
                 ["aps/Output", {id: "units", label: "Units of Measurement", value: at(user, "units")}],
