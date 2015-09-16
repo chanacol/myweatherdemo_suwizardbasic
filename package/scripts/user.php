@@ -81,7 +81,7 @@
                 'includeHumidity' => $this->include_humidity,
             );
 
-            $response = send_curl_request(false, $this->subscription_service->company_token, 'POST', self::BASE_URL, $request);
+            $response = send_curl_request('POST', self::BASE_URL, $request);
 
             $this->user_id = $response->{'id'};
         }
@@ -100,13 +100,13 @@
                 'includeHumidity' => $new->include_humidity
             );
 
-            $response = send_curl_request(false, $this->subscription_service->company_token, 'PUT', $url, $request);
+            $response = send_curl_request('PUT', $url, $request);
         }
 
         public function unprovision(){
 
             $url = self::BASE_URL . $this->user_id;
-            $response = send_curl_request(false, $this->subscription_service->company_token, 'DELETE', $url);
+            $response = send_curl_request('DELETE', $url);
 
         }
     }

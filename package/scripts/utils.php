@@ -1,12 +1,15 @@
 <?php
 
-    function send_curl_request($isProvider, $token, $verb, $url, $payload = ''){
+    function send_curl_request($verb, $url, $payload = ''){
 
         $logger = \APS\LoggerRegistry::get();
 
+        $application = \APS\Request::getController()->getResources("implementing(http://myweatherdemo.com/suwizardbasic/application/1.0)");
+        $token = $application[0]->provider_token;
+
         $headers = array(
                 'Content-type: application/json',
-                ($isProvider ? 'x-provider-token: ' : 'x-company-token: ') . $token
+                'x-provider-token: '. $token
         );
 
         $ch = curl_init();

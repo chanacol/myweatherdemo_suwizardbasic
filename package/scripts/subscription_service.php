@@ -63,7 +63,7 @@
                     'name' => $this->account->companyName
             );
 
-            $response = send_curl_request(true, $this->application->provider_token, 'POST', self::BASE_URL, $request);
+            $response = send_curl_request('POST', self::BASE_URL, $request);
 
             $this->company_id = $response->{'id'};
             $this->company_token = $response->{'token'};
@@ -75,7 +75,7 @@
         public function unprovision(){
 
             $url = self::BASE_URL . $this->company_id;
-            $response = send_curl_request(true, $this->application->provider_token, 'DELETE', $url);
+            $response = send_curl_request('DELETE', $url);
 
         }
     }
