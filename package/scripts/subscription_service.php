@@ -37,12 +37,6 @@
 
         /**
          * @type(string)
-         * @title("Company authorization token")
-         */
-        public $company_token;
-
-        /**
-         * @type(string)
          * @title("Login to MyWeatherDemo interface")
          */
         public $username;
@@ -66,7 +60,6 @@
             $response = send_curl_request('POST', self::BASE_URL, $request);
 
             $this->company_id = $response->{'id'};
-            $this->company_token = $response->{'token'};
             $this->username = $response->{'username'};
             $this->password = $response->{'password'};
 
